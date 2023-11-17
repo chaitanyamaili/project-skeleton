@@ -1,0 +1,30 @@
+{
+  "name": "project-skeleton",
+  "version": "1.0.0",
+  "description": "This repository has starting skeleton for any program project with basic template",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.0",
+    "@semantic-release/release-notes-generator": "^12.0.0",
+    "conventional-changelog-atom": "^4.0.0",
+    "semantic-release": "^22.0.4"
+  },
+  "optionalDependencies": {
+    "esbuild": "^0.19.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanyamaili/project-skeleton.git"
+  },
+  "keywords": [
+    "project-skeleton"
+  ],
+  "author": "chaitanyamaili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaitanyamaili/project-skeleton/issues"
+  },
+  "homepage": "https://github.com/chaitanyamaili/project-skeleton#readme"
+}
