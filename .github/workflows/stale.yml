@@ -1,0 +1,27 @@
+name: "Check Stale PRs"
+on:
+  # noon UTC
+  schedule:
+  - cron: "0 12 * * *"
+  # manual trigger
+  workflow_dispatch: {}
+jobs:
+  check_state:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # only for delete-branch option
+      issues: write
+      pull-requests: write
+    steps:
+    - name: Close Stale PRs
+      uses: actions/stale@v8.0.0
+      with:
+        days-before-stale: 7
+        days-before-close: 7
+        stale-pr-message: 'This PR is stale because it has not been updated in 7 days. It will be closed in 7 days if it still has no activity.'
+        close-pr-message: 'This PR was automatically closed after 14 days of inactivity.'
+        stale-pr-label: stale
+        close-pr-label: closed-stale
+        exempt-pr-labels: not-stale
+        exempt-draft-pr: true
+        delete-branch: true
